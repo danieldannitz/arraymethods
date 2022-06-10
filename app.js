@@ -18,7 +18,7 @@ const inventors = [
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
 let result = inventors.filter((born) => born.year >= 1500 && born.year <= 1599);
-let convertResult = JSON.stringify(result);
+let convertResult = JSON.stringify(result); //result object is now a string
 let selectParagraph = document.querySelector(".result");
 selectParagraph.innerHTML = `${convertResult}`;
 
