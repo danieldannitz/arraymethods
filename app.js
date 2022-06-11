@@ -40,6 +40,32 @@ function map() {
 }
 map();
 
+// Array.prototype.sort()
+// 3. Sort the inventors by birthdate, oldest to youngest
+function firstSort() {
+  let result = inventors.sort((a, b) => {
+    return a.year - b.year;
+  });
+  let convertResult = JSON.stringify(result);
+  let selectParagraph = document.querySelector(".third-exercise p");
+  selectParagraph.innerHTML = `${convertResult}`;
+}
+firstSort();
+
+// Array.prototype.reduce()
+// 4. How many years did all the inventors live all together?
+
+function reduce() {
+  let result = inventors.reduce((a, b) => {
+    //a = 0(start value), b = (callback from the object)
+    return a + (b.passed - b.year);
+  }, 0);
+  let convertResult = JSON.stringify(result);
+  let selectParagraph = document.querySelector(".fourth-exercise p");
+  selectParagraph.innerHTML = `${convertResult}`;
+}
+reduce();
+
 const people = [
   "Bernhard, Sandra",
   "Bethea, Erin",
@@ -83,12 +109,6 @@ const people = [
   "Beecher, Henry",
   "Biondo, Frank",
 ];
-
-// Array.prototype.sort()
-// 3. Sort the inventors by birthdate, oldest to youngest
-
-// Array.prototype.reduce()
-// 4. How many years did all the inventors live all together?
 
 // 5. Sort the inventors by years lived
 
