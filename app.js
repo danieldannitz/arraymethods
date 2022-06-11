@@ -17,10 +17,28 @@ const inventors = [
 
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
-let result = inventors.filter((born) => born.year >= 1500 && born.year <= 1599);
-let convertResult = JSON.stringify(result);
-let selectParagraph = document.querySelector(".result");
-selectParagraph.innerHTML = `${convertResult}`;
+
+function filter() {
+  let result = inventors.filter(
+    (born) => born.year >= 1500 && born.year <= 1599
+  );
+  let convertResult = JSON.stringify(result);
+  let selectParagraph = document.querySelector(".result");
+  selectParagraph.innerHTML = `${convertResult}`;
+}
+filter();
+
+// Array.prototype.map()
+// 2. Give us an array of the inventors first and last names
+function map() {
+  let fullName = inventors.map((name) => {
+    return `${name.first} ${name.last}`;
+  });
+  let convertResult = JSON.stringify(fullName);
+  let selectParagraph = document.querySelector(".second-exercise p");
+  selectParagraph.innerHTML = `${convertResult}`;
+}
+map();
 
 const people = [
   "Bernhard, Sandra",
@@ -65,9 +83,6 @@ const people = [
   "Beecher, Henry",
   "Biondo, Frank",
 ];
-
-// Array.prototype.map()
-// 2. Give us an array of the inventors first and last names
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
