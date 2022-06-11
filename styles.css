@@ -27,7 +27,7 @@ body {
   margin: 32px auto;
   background-color: var(--wrapper-bg);
   border: 0.5rem solid var(--border-anchor-color);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
