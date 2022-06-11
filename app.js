@@ -54,7 +54,6 @@ firstSort();
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
-
 function reduce() {
   let result = inventors.reduce((a, b) => {
     //a = 0(start value), b = (callback from the object)
