@@ -22,19 +22,26 @@ body {
 }
 
 .wrapper {
-  max-width: 50rem;
+  max-width: 93.75rem;
   height: 125rem;
   margin: 32px auto;
   background-color: var(--wrapper-bg);
   border: 0.5rem solid var(--border-anchor-color);
   border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.exercise-wrapper {
+.exercise-wrapper,
+.wrapper aside {
   color: var(--text-color);
   padding: 1.375rem;
-  text-align: center;
-  margin-top: 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 22px;
 }
 
 p {
