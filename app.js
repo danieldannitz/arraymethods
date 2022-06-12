@@ -78,11 +78,11 @@ function secondSort() {
     //statement using the ternary operator if true "?" return -1 if false ":" return 1
     return aList > bList ? -1 : 1;
     //classic method
-    if (aList > bList) {
-      return -1;
-    } else {
-      return 1;
-    }
+    // if (aList > bList) {
+    //   return -1;
+    // } else {
+    //   return 1;
+    // }
   });
 
   let convertResult = JSON.stringify(result);
@@ -179,6 +179,15 @@ const boulevards = [
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+function filterNames() {
+  let result = boulevards.filter((de) => {
+    return de.includes("de");
+  });
+  let convertResult = JSON.stringify(result);
+  let selectParagraph = document.querySelector(".sixth-exercise p");
+  selectParagraph.innerHTML = `${convertResult}`;
+}
+filterNames();
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
