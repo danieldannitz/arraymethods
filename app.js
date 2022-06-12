@@ -70,15 +70,9 @@ function secondSort() {
   //have to do this one again
   let result = inventors.sort((a, b) => {
     //passed - born = years lived
-    let first = a.passed - a.year;
-    let last = b.passed - b.year;
+    let first = a.passed;
+    let last = b.passed;
     console.log(last);
-    return first > last ? -1 : 1;
-    /*  if (first > last) {
-      return -1;
-    } else {
-      return 1;
-    }*/
   });
   let convertResult = JSON.stringify(result);
   let selectParagraph = document.querySelector(".fifth-exercise p");
