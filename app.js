@@ -67,13 +67,24 @@ reduce();
 
 // 5. Sort the inventors by years lived
 function secondSort() {
-  //have to do this one again
   let result = inventors.sort((a, b) => {
-    //passed - born = years lived
-    let first = a.passed;
-    let last = b.passed;
-    console.log(last);
+    //the sort method, by default will return an ascending array
+    //when we compare an array using the sort method, it will either return a:
+    // 1. positive number
+    // 2. 0
+    // 3. a negative number
+    const aList = a.passed - a.year;
+    const bList = b.passed - b.year;
+    //statement using the ternary operator if true "?" return -1 if false ":" return 1
+    return aList > bList ? -1 : 1;
+    //classic method
+    if (aList > bList) {
+      return -1;
+    } else {
+      return 1;
+    }
   });
+
   let convertResult = JSON.stringify(result);
   let selectParagraph = document.querySelector(".fifth-exercise p");
   selectParagraph.innerHTML = `${convertResult}`;
