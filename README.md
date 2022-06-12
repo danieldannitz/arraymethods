@@ -1,1 +1,1 @@
-# arrayfunctions
+# arraymethods
