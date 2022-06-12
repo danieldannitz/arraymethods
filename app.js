@@ -74,11 +74,11 @@ function secondSort() {
     let last = b.passed - b.year;
     console.log(last);
     return first > last ? -1 : 1;
-    if (first > last) {
+    /*  if (first > last) {
       return -1;
     } else {
       return 1;
-    }
+    }*/
   });
   let convertResult = JSON.stringify(result);
   let selectParagraph = document.querySelector(".fifth-exercise p");
