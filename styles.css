@@ -23,7 +23,7 @@ body {
 
 .wrapper {
   max-width: 93.75rem;
-  height: 125rem;
+  height: 150rem;
   margin: 32px auto;
   background-color: var(--wrapper-bg);
   border: 0.5rem solid var(--border-anchor-color);
