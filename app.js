@@ -221,3 +221,18 @@ const data = [
   "car",
   "truck",
 ];
+
+function lastExercise() {
+  let result = data.reduce((obj, item) => {
+    if (!obj[item]) {
+      obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+  }, {});
+  let convertResult = JSON.stringify(result);
+  let selectParagraph = document.querySelector(".eigth-exercise p");
+  selectParagraph.innerHTML = `${convertResult}`;
+}
+
+lastExercise();
